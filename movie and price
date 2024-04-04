@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+class Movie{
+	string movie_name;
+	int t_p;
+	
+	public:
+		Movie(){
+			movie_name="king kong";
+			t_p=200;
+		}
+		
+		Movie(string movie_name,int t_p){
+		    this-> movie_name = movie_name;
+			this->t_p = t_p;
+		}
+		
+		~Movie(){
+			cout<<"Memory Deallocated"<<endl;
+		}
+		
+		void putData(){
+			cout<<"Movie Name:"<<movie_name<<endl;
+			cout<<"Ticket Price:"<<t_p<<endl;
+		}
+};
+
+int main(){
+	Movie m;
+	m.putData();
+	Movie m2("LEO",280);
+	m2.putData();
+	return 0;
+}
